@@ -60,10 +60,11 @@ jobs:
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
-          body:
-            ${{ steps.changelog-summary.outputs.summary }}
+          # Righe commentate 20261119
+          # body:
+          #  ${{ steps.changelog-summary.outputs.summary }}
 
-            ${{ steps.changelog.outputs.changes }}
+          # ${{ steps.changelog.outputs.changes }}
           files: "app-release.apk"
           fail_on_unmatched_files: true
           make_latest: true
