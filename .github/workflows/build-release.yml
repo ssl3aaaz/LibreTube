@@ -65,6 +65,9 @@ jobs:
           #  ${{ steps.changelog-summary.outputs.summary }}
 
           # ${{ steps.changelog.outputs.changes }}
+          # 20261120 aggiunti tag_name e name
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
           files: "app-release.apk"
           fail_on_unmatched_files: true
           make_latest: true
